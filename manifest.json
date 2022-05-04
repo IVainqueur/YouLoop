@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouLoop",
+    "description": "Loop any part of any video on YouTube to your heart's content",
+    "version": "1.0.0",
+    "icons":{
+        "128": "icon.png"
+    },
+    "background":{
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "permissions": ["activeTab", "tabs"]
+}
